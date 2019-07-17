@@ -13,8 +13,11 @@ Hi everyone,
 
 I hope you found the course useful. Here are a few tools/links that will assist you further:
 
+MDN web documentation:
+https://developer.mozilla.org/en-US/docs/Web/
+
 HTML elements:
-https://developer.mozilla.org/en-US/docs/Web
+https://developer.mozilla.org/en-US/docs/Web/HTML
 
 CSS syntax/properties/selectors:
 https://developer.mozilla.org/en-US/docs/web/CSS/Reference
