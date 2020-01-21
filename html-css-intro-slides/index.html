@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>HTML/CSS Introduction</title>
+    <title>HTML/CSS Fundamentals</title>
 
     <meta name="author" content="Catalyst">
 
@@ -65,7 +65,7 @@
       <!-- Intro slide -->
       <section>
         <!-- <h1 class="catalyst-logo">Catalyst</h1> -->
-        <h2>HTML/CSS Introduction</h2>
+        <h2>HTML/CSS Fundamentals</h2>
       </section>
 
       <!-- Housekeeping -->
@@ -492,16 +492,20 @@
         <p style="font-weight:900;font-size:1.2em;margin-bottom: 4px;color:#50433C;">HTML elements:</p>
         <h3>Links</h3>
         <pre><code class="hljs language-html" data-trim contenteditable>
-          &lt;a href="[path-to-file]"&gt;Link text&lt;/a&gt;
+          &lt;a href="[path-to-file]"&gt;This is a link&lt;/a&gt;
         </code></pre>
-        <br>
         <div class="fragment">
           <pre><code class="hljs language-html" data-trim contenteditable>
             &lt;a href="team.html"&gt;Our team&lt;/a&gt;
           </code></pre>
           <p><small><a href="team.html" style="text-decoration:underline;">Our team</a></small></p>
         </div>
-        <p class="fragment"><small><strong>What does href mean?</strong> It comes from Hyperlink REFerence</small></p>
+        <div class="fragment">
+          <pre><code class="hljs language-html" data-trim contenteditable>
+            &lt;a href="team.html#members"&gt;Members&lt;/a&gt;
+          </code></pre>
+          <p><small>Will look within <strong>team.html</strong> for an element with an id of "<strong>members</strong>"</small></p>
+        </div>
       </section>
 
       <!-- HTML elements -links -->
@@ -513,6 +517,7 @@
           &lt;p&gt;Learn more about &lt;a href="team.html"&gt;our team&lt;/a&gt;&lt;/p&gt;
         </code></pre>
         <small>Learn more about <a href="team.html" style="text-decoration:underline;">our team</a></small>
+        <p class="fragment"><small><strong>What does href mean?</strong> It comes from Hyperlink REFerence</small></p>
       </section>
 
       <!-- HTML exercise - links -->
@@ -908,12 +913,13 @@
             header {
               background-color: #ffcd03;
               padding: 20px 30px;
-              /* test! */
+              /* test start */
               width: 300px;
               height: 150px;
               border: 5px solid blue;
               margin: 30px;
               box-sizing: border-box; /* see note*/
+              /* test end */
             }
           </code></pre>
         </div>
@@ -944,7 +950,7 @@
       <section class="section-align-left">
         <h4>Display: inline</h4>
         <pre><code class="hljs language-html" data-trim contenteditable>
-          <p>Text with <a href="#">link</a> <a href="#">link</a> inside</p>
+          <p>Text with <a href="#">link 1</a> <a href="#">link 2</a> inside</p>
           <p>Text without</p>
         </code></pre>
         <pre><code class="hljs language-css" data-trim contenteditable>
@@ -954,7 +960,7 @@
           }
         </code></pre>
         <small style="border:1px solid blue;">
-          <p>Text with <a href="#" style="background-color: orange;text-decoration:underline;">link</a> <a href="#" style="background-color: yellow;text-decoration:underline;">link</a> inside</p>
+          <p>Text with <a href="#" style="background-color: orange;text-decoration:underline;">link 1</a> <a href="#" style="background-color: yellow;text-decoration:underline;">link 2</a> inside</p>
           <p>Text without a link</p>
         </small>
       </section>
@@ -969,7 +975,7 @@
           }
         </code></pre>
         <small style="border:1px solid blue;">
-          <p>Text with <a href="#" style="display:block;background-color: orange;text-decoration:underline;padding-bottom:20px;">link</a> <a href="#" style="display:block;background-color: yellow;text-decoration:underline;padding-bottom:20px;">link</a> inside</p>
+          <p>Text with <a href="#" style="display:block;background-color: orange;text-decoration:underline;padding-bottom:20px;">link 1</a> <a href="#" style="display:block;background-color: yellow;text-decoration:underline;padding-bottom:20px;">link 2</a> inside</p>
           <p>Text without a link</p>
         </small>
       </section>
@@ -983,7 +989,7 @@
           }
         </code></pre>
         <small style="border:1px solid blue;">
-          <p>Text with <a href="#" style="display:inline-block;background-color: orange;text-decoration:underline;padding-bottom:20px;">link</a> <a href="#" style="display:inline-block;background-color: yellow;text-decoration:underline;padding-bottom:20px;">link</a> inside</p>
+          <p>Text with <a href="#" style="display:inline-block;background-color: orange;text-decoration:underline;padding-bottom:20px;">link 1</a> <a href="#" style="display:inline-block;background-color: yellow;text-decoration:underline;padding-bottom:20px;">link 2</a> inside</p>
           <p>Text without a link</p>
         </small>
       </section>
@@ -1042,7 +1048,7 @@
       <section>
         <h3>Let&rsquo;s get more specific</h3>
         <p>There are different ways of referring to a specific element or elements on the page.</p>
-        <p>In the HTML, we give elements either a <br><strong>class</strong> or an <strong>ID</strong> (or both!).</p>
+        <p>In the HTML use an element&rsquo;s <strong>id</strong>, <br>or ideally, give it a <strong>class</strong>.</p> We can also use a combination of these.
         <pre><code class="hljs language-html" data-trim contenteditable>
           <p>Paragraph which needs different styling</p>
           <p>Paragraph which is standard</p>
@@ -1059,7 +1065,7 @@
         <p>For a class, we use a period:</p>
         <pre><code class="hljs" data-trim contenteditable>
           .intro {
-            font-size: 20px; /* note: default is 16px */
+            font-size: 20px;
           }
         </code></pre>
         <br>
@@ -1089,7 +1095,7 @@
       <section class="section-align-left">
         <h3>Using an ID</h3>
         <pre><code class="hljs language-html" data-trim contenteditable>
-          <p id="elephant-info">Elephants are big</p>
+          <h2 id="elephant-info">Elephant history</h2>
         </code></pre>
         <div class="fragment" style="margin-top:35px;">
           <div>
@@ -1144,9 +1150,9 @@
         <p>The great thing about CSS is that we can stack the selectors.</p>
         <p>Let&rsquo;s say we have this HTML:</p>
         <pre><code class="hljs language-html" data-trim contenteditable>
-          <p>Blah blah <a href="#">first link</a> blah</p>
+          <p>This sentence has the <a href="#">first link</a> in it.</p>
 
-          <p class="fact">Blah <a href="#">second link</a> blah</p>
+          <p class="fact">This one has the <a href="#">second link</a> in it.</p>
         </code></pre>
         <p>And we want to make only the second link green</p>
       </section>
@@ -1174,7 +1180,6 @@
 
       <!-- CSS Specificity -->
       <section>
-        <h3>Note:</h3>
         <ul>
           <li><strong>Class selectors</strong><br>
             are more specific than element selectors
@@ -1253,6 +1258,23 @@
 
       <!-- Resources -->
       <section>
+        <h3>Codecademy</h3>
+        <p>Online learning</p>
+        <ul>
+          <li style="line-height: 1.3;"><b>HTML</b><br>
+            <small><a href="https://www.codecademy.com/courses/learn-html" target="_blank" rel="noopener norefferer" >https://www.codecademy.com/courses/learn-html</a>
+            </small>
+          </li>
+          <li style="line-height: 1.3;"><b>CSS</b><br>
+            <small><a href="https://www.codecademy.com/courses/learn-css" target="_blank" rel="noopener norefferer" >https://www.codecademy.com/courses/learn-css</a>
+            </small>
+          </li>
+        </ul>
+        <small>(note: you&rsquo;ll need to create a user account)</small>
+      </section>
+
+      <!-- Resources -->
+      <section>
         <h3>Resources</h3>
         <ul>
           <li style="line-height: 1.3;"><b>HTML elements</b><br>
@@ -1272,11 +1294,6 @@
             </small>
           </li>
         </ul>
-      </section>
-
-      <!-- Slide with Catalyst slogan -->
-      <section class="image-slide">
-        <img class="cat-slogan-image" src="css/theme/images/freedom-to-innovate.svg" alt="freedom to innovate">
       </section>
 
     </div>

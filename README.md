@@ -37,6 +37,10 @@ https://webaim.org/resources/contrastchecker/
 CSS selector diner game:
 https://flukeout.github.io/
 
+Further learning: (note: you need to create a user account)
+https://www.codecademy.com/courses/learn-html
+https://www.codecademy.com/courses/learn-css
+
 Slides will be available for a couple of weeks:
 https://toniaivy.github.io/html-css-intro-slides
 
